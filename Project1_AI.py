@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import pickle
+#import graphviz
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
 from sklearn import tree
@@ -9,7 +10,7 @@ from collections import OrderedDict as Dict
 from sklearn.tree import DecisionTreeClassifier as DTC
 from sklearn.preprocessing import LabelEncoder as LE
 from sklearn.tree import export_graphviz
-import graphviz
+
 
 # Loads a CSV file into the program
 def load_csv_file():
@@ -82,7 +83,7 @@ def create_decision_tree(attributes, data, target_column):
         return(tree_clf)
         
     except:
-       print("Tree build failed")
+        print("Tree build failed")
         return -1
     
 # Saves the Decision Tree
